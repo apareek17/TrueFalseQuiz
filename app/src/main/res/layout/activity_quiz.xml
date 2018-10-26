@@ -7,19 +7,49 @@
     tools:context=".QuizActivity">
 
     <Button
-        android:id="@+id/button_mainactiity_true"
+        android:id="@+id/button_mainactivity_buttontrue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="True"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="302dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_mainactivity_buttonfalse"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_mainactivity_false"
+        android:id="@+id/button_mainactivity_buttonfalse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="False"
-        tools:layout_editor_absoluteX="230dp"
-        tools:layout_editor_absoluteY="302dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_mainactivity_buttontrue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_mainactivity_textViewQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Question"
+        app:layout_constraintBottom_toTopOf="@+id/button_mainactivity_buttontrue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_mainactivity_textViewScore" />
+
+    <TextView
+        android:id="@+id/textView_mainactivity_textViewScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

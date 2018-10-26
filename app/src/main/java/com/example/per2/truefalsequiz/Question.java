@@ -8,7 +8,7 @@ public class Question {
     public Question() {
     }
 
-    public Question(Question q){
+    public Question(String q, boolean a){
         question = q;
         answer = a;
     }
@@ -17,10 +17,17 @@ public class Question {
         return question;
     }
 
+    public String getQuestionText(){
+        return question;
+    }
+
     public boolean isAnswer() {
         return answer;
     }
 
+    public boolean getAnswer(){
+        return answer;
+    }
     public void setQuestion(String question) {
         this.question = question;
     }
