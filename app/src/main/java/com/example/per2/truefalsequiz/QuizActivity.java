@@ -10,9 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-
-import org.w3c.dom.Text;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -57,9 +54,13 @@ public class QuizActivity extends AppCompatActivity {
         InputStream stream = getResources().openRawResource(R.raw.questions); // getting XML
 
         String jsonString = readTextFile(stream);
+
         Gson gson = new Gson();
-        Question[] questions = gson.fromJson(ReadQuestions(), Question[].class);
+
+        Question[] questions = gson.fromJson(jsonString, Question[].class);
+
         List<Question> questionList = Arrays.asList(questions);
+
         quiz = new Quiz(questionList);
 
 
@@ -67,10 +68,10 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    private String ReadQuestions() {
-        InputStream XmlFileInputStream = getResources().openRawResource(R.raw.questions);
-        return readTextFile(XmlFileInputStream);
-    }
+//    private String ReadQuestions() {
+//        InputStream XmlFileInputStream = getResources().openRawResource(R.raw.questions);
+//        return readTextFile(XmlFileInputStream);
+//    }
 
 
 //    private void setListeners() {
