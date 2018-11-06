@@ -13,6 +13,7 @@ public class Quiz {
 
     public Quiz(List<Question> questionList) {
         this.questionList = questionList;
+        this.questionNumber = -1;
     }
 
     public int getQuestionNumber(){
@@ -53,8 +54,10 @@ public class Quiz {
     public Question getNextQuestion() {
         Question s = null;
         if (hasMoreQuestions()) {
-            s = questionList.get(questionNumber + 1);
             questionNumber++;
+            s = questionList.get(questionNumber);
+
+            return s;
 
         }
         return s;
@@ -63,7 +66,7 @@ public class Quiz {
 
     public Boolean hasMoreQuestions(){
             boolean x = true;
-            if (questionNumber + 1 > AllQuestions) {
+            if (questionNumber + 1 >= AllQuestions) {
                 x = false;
             }
             return x;

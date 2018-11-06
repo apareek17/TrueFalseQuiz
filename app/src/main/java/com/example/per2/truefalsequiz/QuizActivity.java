@@ -3,7 +3,6 @@ package com.example.per2.truefalsequiz;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -63,8 +62,9 @@ public class QuizActivity extends AppCompatActivity {
 
         quiz = new Quiz(questionList);
 
+        callQuestion();
 
-        PlayGame();
+        setListener();
 
     }
 
@@ -83,8 +83,8 @@ public class QuizActivity extends AppCompatActivity {
     //}
 
     private void wirewidgets() {
-        buttontrue = findViewById(R.id.button_mainactivity_buttontrue);
-        buttonfalse = findViewById(R.id.button_mainactivity_buttonfalse);
+        buttontrue = findViewById(R.id.button_mainactivity_true);
+        buttonfalse = findViewById(R.id.button_mainactivity_false);
         textViewQuestion = findViewById(R.id.textView_mainactivity_textViewQuestion);
         textViewScore = findViewById(R.id.textView_mainactivity_textViewScore);
     }
@@ -107,14 +107,20 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    private void PlayGame() {
-
+    public void callQuestion(){
         textViewQuestion.setText("" + quiz.getNextQuestionText());
         textViewScore.setText("Score: " + quiz.getScore());
+    }
+
+
+        private void setListener() {
+
 
         buttontrue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 if (quiz.isTrue()) {
                     quiz.setScore(quiz.getScore() + 1);
                     Toast.makeText(QuizActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
@@ -124,8 +130,8 @@ public class QuizActivity extends AppCompatActivity {
                     Toast.makeText(QuizActivity.this, "Wrong!", Toast.LENGTH_SHORT).show();
                 }
                 if (quiz.hasMoreQuestions()) {
+                    callQuestion();
 
-                    PlayGame();
                 } else {
 
                     int s = quiz.getScore();
@@ -145,15 +151,16 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!quiz.isTrue()) {
                     quiz.setScore(quiz.getScore() + 1);
-                    Toast.makeText(QuizActivity.this, "You're Right!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuizActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
                 } else {
                     quiz.setScore(quiz.getScore() - 1);
 
                     Toast.makeText(QuizActivity.this, "Wrong!", Toast.LENGTH_SHORT).show();
                 }
                 if (quiz.hasMoreQuestions()) {
+                    callQuestion();
 
-                    PlayGame();
+
                 } else {
                     int s = quiz.getScore();
 

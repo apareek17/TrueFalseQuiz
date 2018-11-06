@@ -7,35 +7,36 @@
     tools:context=".QuizActivity">
 
     <Button
-        android:id="@+id/button_mainactivity_buttontrue"
+        android:id="@+id/button_mainactivity_true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="True"
+        android:text="@string/truee"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_mainactivity_buttonfalse"
+        app:layout_constraintEnd_toStartOf="@+id/button_mainactivity_false"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_mainactivity_buttonfalse"
+        android:id="@+id/button_mainactivity_false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="False"
+        android:text="@string/falsee"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_mainactivity_buttontrue"
+        app:layout_constraintStart_toEndOf="@+id/button_mainactivity_true"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView_mainactivity_textViewQuestion"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:text="Question"
-        app:layout_constraintBottom_toTopOf="@+id/button_mainactivity_buttontrue"
+        android:text="@string/whatever"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/button_mainactivity_true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Score"
+        android:text="@string/score"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"

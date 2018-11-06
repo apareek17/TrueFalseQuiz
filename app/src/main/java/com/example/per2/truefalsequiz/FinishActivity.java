@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.content.Intent;
+import android.widget.Toast;
 
 public class FinishActivity extends AppCompatActivity{
 
@@ -19,6 +20,7 @@ public class FinishActivity extends AppCompatActivity{
 
         ScoreValue = getIntent().getIntExtra(Intent.EXTRA_TEXT, 0);
         Score.setText("You scored: "+ ScoreValue);
+        Toast.makeText(FinishActivity.this, "Thanks for playing!", Toast.LENGTH_LONG).show();
     }
 
     private void WireWidgets() {

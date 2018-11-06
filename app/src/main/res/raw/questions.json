@@ -1,19 +1,27 @@
 [
   {
-    "question" : "Norway banned chewing gum after 1996",
+    "question" : "Singapore banned chewing gum after 1996",
+    "answer" : true
+  },
+  {
+    "question": "The second derivative of f(x) = x^2 is 2",
+    "answer": false
+  },
+
+  {
+  "question": "The tallest building in the World is located in United Arab of Emirates",
+    "answer": true
+  },
+
+  {
+    "question" : "To find if a function is concave up or concave down, you have to look at the first derivative only",
     "answer" : false
   },
 
   {
-    "question" : "The second derivative of f(x) = x^2 is 2",
-    "answer" : true
-  },
-  {
-    "question": "The tallest building in the World is located in United Arab of Emirates",
-    "answer": true
+    "question" : "Is the Earth flat?",
+    "answer" : false
   }
-
-
 
 
 ]

@@ -1,0 +1,27 @@
+[
+  {
+    "question" : "Singapur prohibió el chicle después de 1996",
+    "answer" : true
+  },
+  {
+    "question": "La segunda derivada de f (x) = x ^ 2 es 2",
+    "answer": false
+  },
+
+  {
+  "question": "El edificio más alto del mundo se encuentra en Emiratos Árabes Unidos",
+    "answer": true
+  },
+
+  {
+    "question" : "Para saber si una función es cóncava hacia arriba o hacia abajo, debes mirar solo la primera derivada",
+    "answer" : false
+  },
+
+  {
+    "question" : "¿Es la tierra plana?",
+    "answer" : false
+  }
+
+
+]
